@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+}
+
+#grid-container {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'home-section' 'skills_section' 'exp_section';
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.margin-wrapper {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+#home-section {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: home-section;
+  height: 550px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#292C33), to(#393d47));
+  background: linear-gradient(to bottom right, #292C33, #393d47);
+  position: relative;
+  overflow: hidden;
+}
+
+#home-section #navbar {
+  position: fixed;
+  z-index: 10000;
+  height: 60px;
+  background: #17191d;
+  width: 100%;
+}
+
+#home-section #navbar #navbar_logo {
+  float: left;
+  width: 20%;
+  margin-top: 14px;
+}
+
+#home-section #navbar #navbar_logo a {
+  text-decoration: none;
+}
+
+#home-section #navbar #navbar_logo h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #D2D5DD;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#home-section #navbar #navbar_logo h3:hover {
+  color: #45bafc;
+}
+
+#home-section #navbar #navbar_links {
+  float: right;
+  width: 75%;
+  margin-top: 15px;
+  text-align: right;
+}
+
+#home-section #navbar #navbar_links a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  color: #B9C1D0;
+  text-decoration: none;
+  margin-left: 30px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#home-section #navbar #navbar_links a:hover {
+  color: #E8EBE4;
+}
+
+#home-section #navbar #navbar_links .position {
+  color: #57EEA1;
+}
+
+#home-section #home-section-title {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  position: relative;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  z-index: 1000;
+  margin-top: 160px;
+}
+
+#home-section #home-section-title h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3em;
+  font-weight: 800;
+  color: #45bafc;
+}
+
+#home-section #home-section-title #title_text {
+  color: #57EEA1;
+}
+
+#home-section #home-section-title p {
+  margin-top: 30px;
+  text-align: center;
+  color: #B9C1D0;
+  font-size: 1.2em;
+}
+
+#home-section #home-section-title button {
+  cursor: pointer;
+  margin-top: 40px;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  border: 1px solid #d3c7c7;
+  background: transparent;
+  color: #d3c7c7;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#home-section #home-section-title button:hover {
+  color: white;
+  border-color: white;
+}
+
+#home-section h4 {
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  text-align: center;
+  font-size: 4em;
+  color: #B9C1D0;
+  -webkit-animation: arrowBounce 1s infinite;
+          animation: arrowBounce 1s infinite;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#home-section h4:hover {
+  color: white;
+}
+
+@-webkit-keyframes arrowBounce {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 5px;
+  }
+}
+
+@keyframes arrowBounce {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 5px;
+  }
+}
+
+#skills_section {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: skills_section;
+  height: 700px;
+  margin-top: 30px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+#skills_section #skills_header {
+  border: 1px solid transparent;
+}
+
+#skills_section #skills_header h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #393d47;
+  font-size: 2.2em;
+}
+
+#skills_section #skills_description {
+  margin-top: 20px;
+}
+
+#skills_section #skills_description p {
+  text-align: center;
+  color: #393d47;
+  font-size: 1.1em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#skills_section #skills_boxes {
+  margin-top: 80px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'html_box css_box sass_box js_box' 'responsive_box node_box git_box python_box';
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+#skills_section #skills_boxes .skill_card {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  background: #fff;
+  border-radius: 6px;
+  height: 200px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+#skills_section #skills_boxes .skill_card:hover {
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+#skills_section #skills_boxes .skill_card img {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 60px;
+  width: 60px;
+}
+
+#skills_section #skills_boxes .skill_card p {
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #393d47;
+  font-size: 1em;
+  text-align: center;
+}
+
+#skills_section #skills_boxes #html_box {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: html_box;
+}
+
+#skills_section #skills_boxes #css_box {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: css_box;
+}
+
+#skills_section #skills_boxes #sass_box {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: sass_box;
+}
+
+#skills_section #skills_boxes #js_box {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: js_box;
+}
+
+#skills_section #skills_boxes #responsive_box {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: responsive_box;
+}
+
+#skills_section #skills_boxes #node_box {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: node_box;
+}
+
+#skills_section #skills_boxes #git_box {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: git_box;
+}
+
+#skills_section #skills_boxes #python_box {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: python_box;
+}
+
+#exp_section {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: exp_section;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  height: 600px;
+  border: 1px solid black;
+}
+/*# sourceMappingURL=style.css.map */
