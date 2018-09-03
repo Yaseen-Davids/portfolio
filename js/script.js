@@ -27,8 +27,11 @@ $(document).ready(function(){
     })
 
     $("#navbar_links a").on('click', function(){
-        if ($(this).html() == 'Skills'){
+        if ($(this).html() == "Skills"){
             $('html,body').animate({scrollTop: skillsPos + 20},1000);
+        }
+        if ($(this).html() == 'Experience'){
+            $('html,body').animate({scrollTop: expPos + 20},1000);
         }
     })
 

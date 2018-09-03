@@ -4,6 +4,35 @@
     margin: 0;
 }
 
+@mixin sectionHeader{
+    border: 1px solid transparent;
+    h2{
+        text-align: center;
+        color: #393d47;
+        font-size: 2.2em;
+    }
+
+    .underline_sect{
+        border-bottom: 4px solid #57EEA1;
+    }
+}
+
+@mixin expBoxImg {
+    img{
+        margin-left: 50px;
+        height: 60px;
+        width: 140px;
+    }
+}
+@mixin expBoxText{
+    color: #393d47;
+    p{
+        margin-top: 10px;
+        margin-left: 20px;
+        font-size: 1em;
+    }
+}
+
 #grid-container{
     display: grid;
     grid-template-areas: 'home-section'
@@ -111,7 +140,6 @@
             margin-top: 40px;
             border: none;
             outline: none;
-            padding: 10px 20px;
             font-family: 'Poppins', sans-serif;
             font-size: 1.1em;
             border: 1px solid rgb(211, 199, 199);
@@ -157,30 +185,19 @@
 #skills_section{
     grid-area: skills_section;
     height: 700px;
-    // border: 1px solid black;
     margin-top: 30px;
     font-family: 'Nunito Sans', sans-serif;
 
     #skills_header{
-        border: 1px solid transparent;
-        h2{
-            margin-top: 10px;
-            margin-bottom: 10px;
-            text-align: center;
-            color: #393d47;
-            font-size: 2.2em;
-        }
+        @include sectionHeader();
     }
 
     #skills_description{
-        // border: 1px solid black;
-        margin-top: 20px;
+        margin-top: 30px;
         p{
             text-align: center;
             color: #393d47;
             font-size: 1.1em;
-            margin-top: 10px;
-            margin-bottom: 10px;
         }
     }
 
@@ -194,7 +211,6 @@
         grid-gap: 20px;
 
         .skill_card{
-            // padding: 2.5rem;
             box-sizing: border-box;
             position: relative;
             background: #fff;
@@ -203,7 +219,6 @@
             border-radius: 6px;
             height: 200px;
             box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-            // transition: all 0.3s;
             transition: all 200ms ease;
 
             &:hover{
@@ -215,8 +230,8 @@
                 left: 50%;
                 top: 40%;
                 transform: translate(-50%,-50%);
-                height: 60px;
-                width: 60px;
+                height: 50px;
+                width: 50px;
             }
             p{
                 position: absolute;
@@ -265,8 +280,82 @@
 
 #exp_section{
     grid-area: exp_section;
-    margin-top: 50px;
-    margin-bottom: 100px;
-    height: 600px;
-    border: 1px solid black;
+    margin-top: 20px;
+    height: 650px;
+    font-family: 'Nunito Sans', sans-serif;
+
+    #exp_header{
+        @include sectionHeader();
+    }
+
+    #exp_box_1{
+        margin-top: 40px;
+        height: 150px;
+        display: grid;
+        grid-template-areas: 'exp_img1 exp_text1'
+        ;
+        grid-template-columns: 30% 1fr;
+        grid-gap: 20px;
+        border-bottom: 1px solid #e6e6e6;
+
+        #exp_img1{
+            grid-area: exp_img1;
+            @include expBoxImg();
+        }
+    
+        #exp_text1{
+            grid-area: exp_text1;
+            @include expBoxText();
+        }
+    }    
+
+    #exp_box_2{
+        margin-top: 40px;
+        height: 170px;
+        display: grid;
+        grid-template-areas: 'exp_img2 exp_text2'
+        ;
+        grid-template-columns: 30% 1fr;
+        grid-gap: 20px;
+        border-bottom: 1px solid #e6e6e6;
+
+        #exp_img2{
+            grid-area: exp_img2;
+            @include expBoxImg();
+        }
+    
+        #exp_text2{
+            grid-area: exp_text2;
+            @include expBoxText();
+        }
+    }
+
+    #exp_box_3{
+        margin-top: 40px;
+        height: 150px;
+        display: grid;
+        grid-template-areas: 'exp_img3 exp_text3'
+        ;
+        grid-template-columns: 30% 1fr;
+        grid-gap: 20px;
+        border-bottom: 1px solid #e6e6e6;
+
+        #exp_img3{
+            grid-area: exp_img3;
+            img{
+                height: 100px;
+                width: 100%;
+            }
+        }
+    
+        #exp_text3{
+            grid-area: exp_text3;
+            @include expBoxText();
+        }
+    }
+
+    .exp_title{
+        font-size: 1.2em;
+        margin-top: 0px;
+    }
 }
