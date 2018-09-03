@@ -115,6 +115,7 @@
 
 #home-section #home-section-title button {
   cursor: pointer;
+  padding: 8px 16px;
   margin-top: 40px;
   border: none;
   outline: none;
@@ -360,7 +361,7 @@
 #exp_section #exp_box_1 #exp_text1 p {
   margin-top: 10px;
   margin-left: 20px;
-  font-size: 1em;
+  font-size: 1.05em;
 }
 
 #exp_section #exp_box_2 {
@@ -397,7 +398,7 @@
 #exp_section #exp_box_2 #exp_text2 p {
   margin-top: 10px;
   margin-left: 20px;
-  font-size: 1em;
+  font-size: 1.05em;
 }
 
 #exp_section #exp_box_3 {
@@ -433,7 +434,7 @@
 #exp_section #exp_box_3 #exp_text3 p {
   margin-top: 10px;
   margin-left: 20px;
-  font-size: 1em;
+  font-size: 1.05em;
 }
 
 #exp_section .exp_title {
