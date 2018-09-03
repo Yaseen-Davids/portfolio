@@ -4,6 +4,8 @@
     margin: 0;
 }
 
+// ############################## MIXINS ##############################
+// SECTION HEADER
 @mixin sectionHeader{
     border: 1px solid transparent;
     h2{
@@ -17,6 +19,7 @@
     }
 }
 
+// EXPERIENCE BOX IMG
 @mixin expBoxImg {
     img{
         margin-left: 50px;
@@ -24,6 +27,7 @@
         width: 140px;
     }
 }
+// EXPERIENCE BOX TEXT
 @mixin expBoxText{
     color: #393d47;
     p{
@@ -33,6 +37,9 @@
     }
 }
 
+
+// ############################## THE MAGIC ##############################
+// GRID CONTAINER
 #grid-container{
     display: grid;
     grid-template-areas: 'home-section'
@@ -43,11 +50,13 @@
     font-family: 'Nunito Sans', sans-serif;
 }
 
+// MARGIN WRAPPER
 .margin-wrapper{
     margin-left: 150px;
     margin-right: 150px;
 }
 
+// ############################## HOME SECTION ##############################
 #home-section {
     grid-area: home-section;
     height: 550px;
@@ -55,7 +64,7 @@
     position: relative;
     overflow: hidden;
     
-
+    // ############################## NAVBAR ##############################
     #navbar{
         position: fixed;
         z-index: 10000;
@@ -63,6 +72,7 @@
         background: rgb(23, 25, 29);
         width: 100%;
 
+        // ############################## NAVBAR LOGO ##############################
         #navbar_logo{
             float: left;
             width: 20%;
@@ -85,6 +95,7 @@
                 }
             }
         }
+        // ############################## NAVBAR LINKS ##############################
         #navbar_links{
             float: right;
             width: 75%;
@@ -104,12 +115,12 @@
                 }
             }
             .position{
-                // color: #45bafc;
                 color: #57EEA1;
             }
         }
     }
 
+    // ############################## HOME SECTION TITLE ##############################
     #home-section-title{
         transform: scale(0);
         position: relative;
@@ -125,6 +136,7 @@
             color: #45bafc;
         }
 
+        // TITLE TEXT COLOR
         #title_text{
             color: #57EEA1;
         }
@@ -135,6 +147,7 @@
             font-size: 1.2em;
         }
 
+        // CONTACT BUTTON
         button{
             cursor: pointer;
             margin-top: 40px;
@@ -182,16 +195,19 @@
 
 }
 
+// ############################## SKILLS SECTION ##############################
 #skills_section{
     grid-area: skills_section;
     height: 700px;
     margin-top: 30px;
     font-family: 'Nunito Sans', sans-serif;
 
+    // SKILLS SECTION HEADER
     #skills_header{
         @include sectionHeader();
     }
 
+    // SKILLS SECTION DESCRIPTION
     #skills_description{
         margin-top: 30px;
         p{
@@ -201,6 +217,7 @@
         }
     }
 
+    // SKILLS SECTION BOXES
     #skills_boxes{
         margin-top: 80px;
         display: grid;
@@ -210,6 +227,7 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 20px;
 
+        // SKILLS CARD
         .skill_card{
             box-sizing: border-box;
             position: relative;
@@ -244,50 +262,54 @@
             }
         }
 
+        // HTML BOX
         #html_box{
             grid-area: html_box;
         }
-
+        // CSS BOX
         #css_box{
             grid-area: css_box;
         }
-
+        // SASS BOX
         #sass_box{
             grid-area: sass_box;
         }
-
+        // JAVASCRIPT BOX
         #js_box{
             grid-area: js_box;
         }
-
+        // RESPONSIVE BOX
         #responsive_box{
             grid-area: responsive_box;
         }
-
+        // NODE BOX
         #node_box{
             grid-area: node_box;
         }
-
+        // GIT BOX
         #git_box{
             grid-area: git_box;
         }
-
+        // PYTHON BOX
         #python_box{
             grid-area: python_box;
         }
     }
 }
 
+// ############################## EXPERIENCE ##############################
 #exp_section{
     grid-area: exp_section;
     margin-top: 20px;
     height: 650px;
     font-family: 'Nunito Sans', sans-serif;
 
+    // EXPERIENCE HEADER
     #exp_header{
         @include sectionHeader();
     }
 
+    // EXPERIENCE BOX 1
     #exp_box_1{
         margin-top: 40px;
         height: 150px;
@@ -298,17 +320,20 @@
         grid-gap: 20px;
         border-bottom: 1px solid #e6e6e6;
 
+        // IMG 1
         #exp_img1{
             grid-area: exp_img1;
             @include expBoxImg();
         }
     
+        // TEXT 1
         #exp_text1{
             grid-area: exp_text1;
             @include expBoxText();
         }
     }    
 
+    // EXPERIENCE BOX 2
     #exp_box_2{
         margin-top: 40px;
         height: 170px;
@@ -319,17 +344,20 @@
         grid-gap: 20px;
         border-bottom: 1px solid #e6e6e6;
 
+        // IMG 2
         #exp_img2{
             grid-area: exp_img2;
             @include expBoxImg();
         }
     
+        // TEXT 2
         #exp_text2{
             grid-area: exp_text2;
             @include expBoxText();
         }
     }
 
+    // EXPERIENCE BOX 3
     #exp_box_3{
         margin-top: 40px;
         height: 150px;
@@ -340,6 +368,7 @@
         grid-gap: 20px;
         border-bottom: 1px solid #e6e6e6;
 
+        // IMG 3
         #exp_img3{
             grid-area: exp_img3;
             img{
@@ -348,12 +377,14 @@
             }
         }
     
+        // TEXT 3
         #exp_text3{
             grid-area: exp_text3;
             @include expBoxText();
         }
     }
 
+    // JOB TITLE
     .exp_title{
         font-size: 1.2em;
         margin-top: 0px;
