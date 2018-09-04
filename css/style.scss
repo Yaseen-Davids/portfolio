@@ -42,12 +42,6 @@ $textColor:#393d47;
         font-size: 1.05em;
     }
 }
-@mixin educBoxHead {
-    h3{
-        font-size: 1.5em;
-        font-weight: lighter;
-    }
-}
 @mixin educBoxContent {
     h3{
         margin-top: 10px;
@@ -421,7 +415,7 @@ $textColor:#393d47;
 #educ_section{
     grid-area: educ_section;
     margin-top: 30px;
-    height: 700px;
+    height: 620px;
     font-family: 'Nunito Sans', sans-serif;
 
     // EDUCATION HEADER
@@ -438,20 +432,17 @@ $textColor:#393d47;
         ;
         grid-template-columns: 1fr;
         grid-gap: 20px;
-        height: 600px;
+        height: 520px;
         font-family: 'Poppins', sans-serif;
         color: $textColor;
         margin-left: 50px;
         margin-right: 50px;
+        
 
         // EDUCATION BOX 1
         #educ_box1{
             grid-area: educ_box1;
             border-bottom: 1px solid #e6e6e6;
-            // HEADER BOX
-            #educ_box1_header{
-                @include educBoxHead();
-            }
             // CONTENT BOX
             #educ_box1_content{
                 @include educBoxContent();
@@ -462,10 +453,6 @@ $textColor:#393d47;
         #educ_box2{
             grid-area: educ_box2;
             border-bottom: 1px solid #e6e6e6;
-            // HEADER BOX
-            #educ_box2_header{
-                @include educBoxHead();
-            }
             // CONTENT BOX
             #educ_box2_content{
                 @include educBoxContent();

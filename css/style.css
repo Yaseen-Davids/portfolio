@@ -447,7 +447,7 @@
   -ms-grid-column: 1;
   grid-area: educ_section;
   margin-top: 30px;
-  height: 700px;
+  height: 620px;
   font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -473,7 +473,7 @@
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   grid-gap: 20px;
-  height: 600px;
+  height: 520px;
   font-family: 'Poppins', sans-serif;
   color: #393d47;
   margin-left: 50px;
@@ -485,11 +485,6 @@
   -ms-grid-column: 1;
   grid-area: educ_box1;
   border-bottom: 1px solid #e6e6e6;
-}
-
-#educ_section #educ_main #educ_box1 #educ_box1_header h3 {
-  font-size: 1.5em;
-  font-weight: lighter;
 }
 
 #educ_section #educ_main #educ_box1 #educ_box1_content h3 {
@@ -510,11 +505,6 @@
   -ms-grid-column: 1;
   grid-area: educ_box2;
   border-bottom: 1px solid #e6e6e6;
-}
-
-#educ_section #educ_main #educ_box2 #educ_box2_header h3 {
-  font-size: 1.5em;
-  font-weight: lighter;
 }
 
 #educ_section #educ_main #educ_box2 #educ_box2_content h3 {
