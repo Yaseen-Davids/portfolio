@@ -4,6 +4,7 @@ $(document).ready(function(){
     
     const skillsPos = $("#skills_section").position().top - 50;
     const expPos = $("#exp_section").position().top - 50 ;
+    const educPos = $("#educ_section").position().top - 50 ;
 
 
     $(window).scroll(function (event) {
@@ -20,6 +21,10 @@ $(document).ready(function(){
             $("#navbar_links a").removeClass('position');
             $("#navbar_links a:nth-child(2)").first().addClass('position');
         }
+        if (scroll > educPos){
+            $("#navbar_links a").removeClass('position');
+            $("#navbar_links a:nth-child(3").first().addClass('position');
+        }
     });
 
     $("#arrow_skills").on('click', function(){
@@ -32,6 +37,9 @@ $(document).ready(function(){
         }
         if ($(this).html() == 'Experience'){
             $('html,body').animate({scrollTop: expPos + 20},1000);
+        }
+        if ($(this).html() == 'Education'){
+            $('html,body').animate({scrollTop: educPos + 20},1000);
         }
     })
 

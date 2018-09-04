@@ -5,7 +5,7 @@
 #grid-container {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'home-section' 'skills_section' 'exp_section';
+      grid-template-areas: 'home-section' 'skills_section' 'exp_section' 'educ_section';
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   font-family: 'Nunito Sans', sans-serif;
@@ -440,5 +440,93 @@
 #exp_section .exp_title {
   font-size: 1.2em;
   margin-top: 0px;
+}
+
+#educ_section {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: educ_section;
+  margin-top: 30px;
+  height: 700px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+#educ_section #educ_header {
+  border: 1px solid transparent;
+}
+
+#educ_section #educ_header h2 {
+  text-align: center;
+  color: #393d47;
+  font-size: 2.2em;
+}
+
+#educ_section #educ_header .underline_sect {
+  border-bottom: 4px solid #57EEA1;
+}
+
+#educ_section #educ_main {
+  margin-top: 30px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'educ_box1' 'educ_box2';
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 20px;
+  height: 600px;
+  font-family: 'Poppins', sans-serif;
+  color: #393d47;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#educ_section #educ_main #educ_box1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: educ_box1;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+#educ_section #educ_main #educ_box1 #educ_box1_header h3 {
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+
+#educ_section #educ_main #educ_box1 #educ_box1_content h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+#educ_section #educ_main #educ_box1 #educ_box1_content p {
+  margin-left: 30px;
+  font-size: 1em;
+  margin-top: 10px;
+  line-height: 25px;
+  word-spacing: 2px;
+}
+
+#educ_section #educ_main #educ_box2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: educ_box2;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+#educ_section #educ_main #educ_box2 #educ_box2_header h3 {
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+
+#educ_section #educ_main #educ_box2 #educ_box2_content h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+#educ_section #educ_main #educ_box2 #educ_box2_content p {
+  margin-left: 30px;
+  font-size: 1em;
+  margin-top: 10px;
+  line-height: 25px;
+  word-spacing: 2px;
 }
 /*# sourceMappingURL=style.css.map */

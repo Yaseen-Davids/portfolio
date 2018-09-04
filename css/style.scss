@@ -4,13 +4,19 @@
     margin: 0;
 }
 
+// ############################## VARIABLES ##############################
+$borderSettings: 1px solid black;
+// $borderSettings: none;
+$textColor:#393d47;
+
+
 // ############################## MIXINS ##############################
 // SECTION HEADER
 @mixin sectionHeader{
     border: 1px solid transparent;
     h2{
         text-align: center;
-        color: #393d47;
+        color: $textColor;
         font-size: 2.2em;
     }
 
@@ -29,14 +35,32 @@
 }
 // EXPERIENCE BOX TEXT
 @mixin expBoxText{
-    color: #393d47;
+    color: $textColor;
     p{
         margin-top: 10px;
         margin-left: 20px;
         font-size: 1.05em;
     }
 }
-
+@mixin educBoxHead {
+    h3{
+        font-size: 1.5em;
+        font-weight: lighter;
+    }
+}
+@mixin educBoxContent {
+    h3{
+        margin-top: 10px;
+        font-size: 1.2em;
+    }
+    p{
+        margin-left: 30px;
+        font-size: 1em;
+        margin-top: 10px;
+        line-height: 25px;
+        word-spacing: 2px;
+    }
+}
 
 // ############################## THE MAGIC ##############################
 // GRID CONTAINER
@@ -45,6 +69,7 @@
     grid-template-areas: 'home-section'
     'skills_section'
     'exp_section'
+    'educ_section'
     ;
     grid-template-columns: 1fr;
     font-family: 'Nunito Sans', sans-serif;
@@ -60,7 +85,7 @@
 #home-section {
     grid-area: home-section;
     height: 550px;
-    background: linear-gradient(to bottom right, #292C33, #393d47);
+    background: linear-gradient(to bottom right, #292C33, $textColor);
     position: relative;
     overflow: hidden;
     
@@ -213,7 +238,7 @@
         margin-top: 30px;
         p{
             text-align: center;
-            color: #393d47;
+            color: $textColor;
             font-size: 1.1em;
         }
     }
@@ -257,7 +282,7 @@
                 left: 50%;
                 top: 75%;
                 transform: translate(-50%,-50%);
-                color: #393d47;
+                color: $textColor;
                 font-size: 1em;
                 text-align: center;
             }
@@ -389,5 +414,62 @@
     .exp_title{
         font-size: 1.2em;
         margin-top: 0px;
+    }
+}
+
+// ############################## EDUCATION SECTION ##############################
+#educ_section{
+    grid-area: educ_section;
+    margin-top: 30px;
+    height: 700px;
+    font-family: 'Nunito Sans', sans-serif;
+
+    // EDUCATION HEADER
+    #educ_header{
+        @include sectionHeader();
+    }
+
+    // EDUCATION MAIN CONTENT
+    #educ_main{
+        margin-top: 30px;
+        display: grid;
+        grid-template-areas: 'educ_box1'
+        'educ_box2'
+        ;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        height: 600px;
+        font-family: 'Poppins', sans-serif;
+        color: $textColor;
+        margin-left: 50px;
+        margin-right: 50px;
+
+        // EDUCATION BOX 1
+        #educ_box1{
+            grid-area: educ_box1;
+            border-bottom: 1px solid #e6e6e6;
+            // HEADER BOX
+            #educ_box1_header{
+                @include educBoxHead();
+            }
+            // CONTENT BOX
+            #educ_box1_content{
+                @include educBoxContent();
+            }
+        }
+
+        // EDUCATION BOX 2
+        #educ_box2{
+            grid-area: educ_box2;
+            border-bottom: 1px solid #e6e6e6;
+            // HEADER BOX
+            #educ_box2_header{
+                @include educBoxHead();
+            }
+            // CONTENT BOX
+            #educ_box2_content{
+                @include educBoxContent();
+            }
+        }
     }
 }
